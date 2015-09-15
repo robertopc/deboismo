@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #3180B3;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+}
+
+main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+    #deboismo {
+        width: 100%;
+        /*height: 100%;*/
+    }
+
+
+footer {
+    position: fixed;
+    bottom: -webkit-calc( -50% + 64px );
+    bottom: -moz-calc( -50% + 64px );
+    bottom: calc( -50% + 64px );
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255,255,255,0.78);
+    padding-top: 48px;
+    color: #333;
+}
+
+    footer .menu {
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        margin-left: -16px;
+    }
+
+    footer .column {
+        position: relative;
+        float: left;
+        width: 25%;
+        min-height: 300px;
+        height: 100%;
+        padding: 1%;
+    }
+
+#menu-button {
+    cursor: pointer;
+}
+
+strong {
+    font-size: 1.2em;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
+#by {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    color: #000;
+}
+    #by div {
+        float: left;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 6px;
+    }
+
+.link-black {
+    text-decoration: underline;
+    color: #000;
+}
+
+.gravatar {
+    float: left;
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+}
