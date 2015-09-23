@@ -33,29 +33,6 @@ noscript {
     background: #3180B3;
     z-index: 2;
 }
-    @-webkit-keyframes translacao {
-    	to {
-    		transform: rotate(360deg);
-    	}
-    }
-    @keyframes translacao {
-    	to {
-    		transform: rotate(360deg);
-    	}
-    }
-
-    #yingyangloading {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-animation: translacao 3s linear infinite;
-		-moz-animation: translacao 3s linear infinite;
-		animation: translacao 3s linear infinite;
-		-webkit-transform-origin: center center;
-		transform-origin: center center;
-        margin-top: -64px;
-        margin-left: -64px;
-    }
 
 #wrapper {
     position: absolute;
@@ -78,13 +55,14 @@ noscript {
 
 #deboismo_logo {
     position: absolute;
-    top: 15em;
+    top: 10em;
     left: 50%;
-    font-size: 3em;
-    font-family: Lato;
+    font-size: 4em;
+    font-family: Chewy, sans-serif;
     text-transform: uppercase;
     font-weight: 900;
     color: #f60;
+	text-shadow: 0 0 16px #fff;
     text-align: center;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -200,12 +178,13 @@ strong {
 
     .mandamentos {
         position: absolute;
-        font-family: "Dancing Script", sans-serif;
+        font-family: Chewy, sans-serif;
         font-size: 4em;
         font-weight: 900;
         color: #ff6600;
         cursor: default;
         z-index: 1;
+    	text-shadow: 0 0 16px #fff;
     }
         .mandamentos:hover {
             background: rgba(255, 255, 255, 0.9);
@@ -353,4 +332,98 @@ strong {
             -moz-transform: scale(1);
             transform: scale(1);
         }
+    }
+
+/* ANIMAÇÕES ******************************************************************/
+
+    @-webkit-keyframes rotacao {
+    	to {
+    		transform: rotate(360deg);
+    	}
+    }
+    @keyframes rotacao {
+    	to {
+    		transform: rotate(360deg);
+    	}
+    }
+
+    @-webkit-keyframes brilho {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes brilho {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @-webkit-keyframes levitacao {
+      0% {
+        transform: translate(-8.4610539px,79.91733px);
+      }
+      50% {
+        transform: translate(-8.4610539px,99.91733px);
+      }
+      100% {
+        transform: translate(-8.4610539px,79.91733px);
+      }
+    }
+
+    @keyframes levitacao {
+      0% {
+        transform: translate(-8.4610539px,79.91733px);
+      }
+      50% {
+        transform: translate(-8.4610539px,99.91733px);
+      }
+      100% {
+        transform: translate(-8.4610539px,79.91733px);
+      }
+    }
+
+    #yingyangloading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-animation: rotacao 3s linear infinite;
+    	-moz-animation: rotacao 3s linear infinite;
+    	animation: rotacao 3s linear infinite;
+    	-webkit-transform-origin: center center;
+    	transform-origin: center center;
+        margin-top: -64px;
+        margin-left: -64px;
+    }
+
+    #yingyang {
+      -webkit-animation: rotacao 18s linear infinite;
+      -moz-animation: rotacao 18s linear infinite;
+      animation: rotacao 18s linear infinite;
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+    }
+
+    #luzes {
+      -webkit-animation: brilho 6s linear infinite;
+      -moz-animation: brilho 6s linear infinite;
+      animation: brilho 6s linear infinite;
+    }
+
+    #preguica {
+      -webkit-animation: levitacao 6s linear infinite;
+      -moz-animation: levitacao 6s linear infinite;
+      animation: levitacao 6s linear infinite;
     }

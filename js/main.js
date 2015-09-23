@@ -2,6 +2,14 @@ var menuopen = false;
 var lastFrase;
 var lastId;
 
+// botão share facebook
+$('.btnShare').click(function(){
+	elem = $(this);
+	postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
+
+	return false;
+});
+
 $('#menu-button').click( function() {
 
 	if( ! menuopen ) {
@@ -66,16 +74,3 @@ function(){
 
 	$('#'+ lastId).html( lastFrase );
 });
-
-// Animação
-// yingyang
-$.Velocity.hook( $('#yingyang'), 'translateY', '-92.186955px');
-$('#yingyang').velocity({ transformOrigin: '50% 50%', rotateX: '180deg' }, { loop: true, delay: 3000, duration: 3000 });
-
-// luzes
-$('#luzes').velocity({ opacity: 0.5 }, { loop: true, delay: 1000, duration: 1000 });
-
-// preguiça
-$.Velocity.hook( $('#preguica'), "translateX", '-8.4610539px' );
-$.Velocity.hook( $('#preguica'), "translateY", '79.91733px' );
-$('#preguica').velocity({ translateY: '-=5px' }, { loop: true, delay: 500 });
