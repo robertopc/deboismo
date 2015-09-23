@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #3180B3;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3180B3;
+    z-index: 2;
+}
+    @-webkit-keyframes translacao {
+    	to {
+    		transform: rotate(360deg);
+    	}
+    }
+    @keyframes translacao {
+    	to {
+    		transform: rotate(360deg);
+    	}
+    }
+
+    #yingyangloading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-animation: translacao 3s linear infinite;
+		-moz-animation: translacao 3s linear infinite;
+		animation: translacao 3s linear infinite;
+		-webkit-transform-origin: center center;
+		transform-origin: center center;
+        margin-top: -64px;
+        margin-left: -64px;
+    }
+
+#wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+}
+
+#svg {
+    -webkit-transform: scale(6);
+    -moz-transform: scale(6);
+    transform: scale(6);
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    transform-origin: top left;
+}
+
+#deboismo_logo {
+    position: absolute;
+    top: 15em;
+    left: 50%;
+    font-size: 3em;
+    font-family: Lato;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #f60;
+    text-align: center;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+footer {
+    position: fixed;
+    -webkit-bottom: calc( -100% + 68px );
+    -moz-bottom: calc( -100% + 68px );
+    bottom: calc( -100% + 68px );
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.9);
+    padding-top: 48px;
+    color: #333;
+    z-index: 3;
+}
+
+    footer .menu {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        margin-left: -16px;
+    }
+
+    footer .column {
+        position: relative;
+        float: left;
+        width: 25%;
+        min-height: 300px;
+        height: 100%;
+        padding: 1%;
+        margin-top: 12px;
+    }
+
+
+.player-button {
+    display: none;
+}
+
+#menu-button,
+#player-button {
+    cursor: pointer;
+}
+
+strong {
+    font-size: 1.2em;
+}
+
+.left10 {
+    left: 10px !important;
+    margin-left: 0 !important;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
+.float-center {
+    float: center !important;
+}
+.float-right {
+    float: right !important;
+}
+
+#by {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    padding: 10px 0;
+    color: #000;
+    z-index: 4;
+    font-size: 16px;
+}
+    #by div {
+        float: left;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 6px;
+    }
+
+.link-black {
+    text-decoration: underline;
+    color: #000;
+}
+
+.gravatar {
+    float: left;
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+}
+
+.row {
+    float: left;
+    clear: both;
+    width: 100%;
+    height: auto;
+}
+
+.size50 {
+    width: 50% !important;
+}
+
+/* MANDAMENTOS ****************************************************************/
+
+    .mandamentos {
+        position: absolute;
+        font-family: "Dancing Script", sans-serif;
+        font-size: 4em;
+        font-weight: 900;
+        color: #ff6600;
+        cursor: default;
+        z-index: 1;
+    }
+        .mandamentos:hover {
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 2;
+            padding: 0.5em;
+        }
+
+    #mandamento_1 {
+        top: 1em;
+        left: 6em;
+    }
+
+    #mandamento_2 {
+        top: 3em;
+        left: 4em;
+    }
+
+    #mandamento_3 {
+        top: 5em;
+        left: 2em;
+    }
+
+    #mandamento_4 {
+        top: 7em;
+        left: 4em;
+    }
+
+    #mandamento_5 {
+        top: 9em;
+        left: 6em;
+    }
+
+    #mandamento_6 {
+        top: 1em;
+        right:7em;
+    }
+
+    #mandamento_7 {
+        top: 3em;
+        right: 5em;
+    }
+
+    #mandamento_8 {
+        top: 5em;
+        right: 3em;
+    }
+
+    #mandamento_9 {
+        top: 7em;
+        right: 5em;
+    }
+
+    #mandamento_10 {
+        top: 9em;
+        right: 7em;
+    }
+
+/* RESPONSIVO *****************************************************************/
+
+    @media (max-width: 1280px) {
+
+        body {
+            font-size: 10px;
+        }
+
+        #svg {
+            -webkit-transform: scale(4);
+            -moz-transform: scale(4);
+            transform: scale(4);
+        }
+    }
+
+    @media (max-width: 1024px) {
+
+        body {
+            font-size: 8px;
+        }
+
+        .column {
+            font-size: 200%;
+        }
+
+        #svg {
+            -webkit-transform: scale(3.2);
+            -moz-transform: scale(3.2);
+            transform: scale(3.2);
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        body {
+            font-size: 6px;
+        }
+
+        #svg {
+            -webkit-transform: scale(2.4);
+            -moz-transform: scale(2.4);
+            transform: scale(2.4);
+        }
+
+        footer {
+            overflow-y: visible;
+            overflow-x: hidden;
+        }
+
+        .column {
+            clear: both;
+            width: 100% !important;
+            min-height: auto !important;
+            font-size: 300%;
+        }
+
+        .column:last-of-type {
+            margin-bottom: 32px;
+        }
+
+        .menu.topo {
+            left: 0 !important;
+            margin-left: 72px !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        body {
+            font-size: 4px;
+        }
+
+        #svg {
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+    }
+
+    @media (max-width: 320px) {
+
+        body {
+            font-size: 2.5px;
+        }
+
+        #svg {
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            transform: scale(1);
+        }
+    }
