@@ -12,6 +12,18 @@ body {
     font-size: 16px;
 }
 
+noscript {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    color: #900;
+    font-size: 300%;
+    text-align: center;
+    padding: 10px;
+}
+
 #loading {
     position: fixed;
     top: 0;
