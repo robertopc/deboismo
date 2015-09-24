@@ -403,6 +403,7 @@ strong {
     	-moz-animation: rotacao 3s linear infinite;
     	animation: rotacao 3s linear infinite;
     	-webkit-transform-origin: center center;
+    	-moz-transform-origin: center center;
     	transform-origin: center center;
         margin-top: -64px;
         margin-left: -64px;
@@ -413,6 +414,7 @@ strong {
       -moz-animation: rotacao 18s linear infinite;
       animation: rotacao 18s linear infinite;
       -webkit-transform-origin: center center;
+      -moz-transform-origin: center center;
       transform-origin: center center;
     }
 
